@@ -1,0 +1,24 @@
+# ninja log v5
+7	411	1686866928839177313	CMakeFiles/meteo.dir/Datatypes/WindSpeed.cpp.o	299d18df53132b2
+6	613	1687879518023254364	CMakeFiles/meteo.dir/Entities/Zone/City.cpp.o	9d63bc02d9d02a33
+354	390	1687880177014716270	meteo	6191d531a5005e4d
+6	396	1687879538129479169	CMakeFiles/meteo.dir/Entities/Profile/Profile.cpp.o	a8359d0ccff10912
+7	412	1686866928840466991	CMakeFiles/meteo.dir/Datatypes/Temperature.cpp.o	620bb8f258ca2b2
+5	354	1687880176977066677	CMakeFiles/meteo.dir/main.cpp.o	1d02456760c87b88
+7	443	1686866928872287845	CMakeFiles/meteo.dir/Threshhold/Threshold.cpp.o	52ef46157bb6851c
+7	449	1687877346664113945	CMakeFiles/meteo.dir/Profile/Profile.cpp.o	d485857e77053ac5
+8	467	1687877346682731072	CMakeFiles/meteo.dir/Threshold/Threshold.cpp.o	39e6aece6729a0ca
+8	395	1687877346607863474	CMakeFiles/meteo.dir/Zone/Zone.cpp.o	c05fd61a12cf472f
+5	317	1687879982706929667	CMakeFiles/meteo.dir/Entities/Zone/Region.cpp.o	f336b56c5698a43a
+6	391	1687879538124281265	CMakeFiles/meteo.dir/Entities/Threshold/Threshold.cpp.o	280b3a8913ad0e63
+7	456	1687877346672417099	CMakeFiles/meteo.dir/User/User.cpp.o	66869dfef4bf666c
+7	420	1687877346635267679	CMakeFiles/meteo.dir/Preference/Preference.cpp.o	c90d605ff4b51ca7
+6	395	1687879538128699741	CMakeFiles/meteo.dir/Entities/Preference/Preference.cpp.o	8a6057a7027b9c55
+0	52	1687880198466128710	build.ninja	c62e422558af2e5c
+6	613	1687879518023048320	CMakeFiles/meteo.dir/Entities/Zone/Zone.cpp.o	c6e808de37625796
+6	400	1687879538134327359	CMakeFiles/meteo.dir/Entities/User/User.cpp.o	ca29d198cba8fa22
+6	374	1687880265852941450	CMakeFiles/meteo.dir/Entities/Zone/Country.cpp.o	913d8682a61110b5
+6	377	1687880265857106515	CMakeFiles/meteo.dir/main.cpp.o	1d02456760c87b88
+377	412	1687880265893416777	meteo	b7482ea07d1ff2c7
+5	313	1687880279910636488	CMakeFiles/meteo.dir/main.cpp.o	1d02456760c87b88
+314	346	1687880279944853848	meteo	b7482ea07d1ff2c7
