@@ -4,6 +4,6 @@
 
 #include "Country.h"
 
-Country::Country() {
+Country::Country(std::string name, std::uint8_t inseeCode, std::string isoCode) : Zone(name, inseeCode, isoCode) {
 
 }

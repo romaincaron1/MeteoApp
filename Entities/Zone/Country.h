@@ -9,7 +9,7 @@
 
 class Country : public Zone {
     public:
-        Country();
+        Country(std::string name, std::uint8_t inseeCode, std::string isoCode);
 };
 
 

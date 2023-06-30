@@ -15,7 +15,6 @@ class Zone {
         std::string isoCode;
 
     public:
-        Zone() = default;
         Zone(std::string name, std::uint8_t inseeCode, std::string isoCode);
         // Getters
         virtual const std::string getName() const;

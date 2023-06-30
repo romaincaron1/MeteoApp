@@ -4,6 +4,6 @@
 
 #include "Region.h"
 
-Region::Region() {
+Region::Region(std::string name, std::uint8_t inseeCode, std::string isoCode) : Zone(name, inseeCode, isoCode) {
 
 }

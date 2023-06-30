@@ -2,30 +2,28 @@
 
 // Getters
 
-User::User(std::string firstname, std::string lastname, std::string email, std::string password, Profile profile) : profile(profile) {
+User::User(std::string firstname, std::string lastname, Email email, Password password, Profile profile) : profile(profile), email(email), password(password) {
     this->firstname = firstname;
     this->lastname = lastname;
-    this->email = email;
-    this->password = password;
 }
 
-std::string User::getFirstname() const {
+const std::string User::getFirstname() const {
     return this->firstname;
 }
 
-std::string User::getLastname() const {
+const std::string User::getLastname() const {
     return this->lastname;
 }
 
-std::string User::getEmail() const {
-    return this->email;
+const Email User::getEmail() const {
+    return this->email.value;
 }
 
-std::string User::getPassword() const {
-    return this->password;
+const Password User::getPassword() const {
+    return this->password.value;
 }
 
-Profile User::getProfile() const {
+const Profile User::getProfile() const {
     return this->profile;
 }
 
@@ -39,11 +37,11 @@ void User::setLastname(std::string lastname) {
     this->lastname = lastname;
 }
 
-void User::setEmail(std::string email) {
+void User::setEmail(Email email) {
     this->email = email;
 }
 
-void User::setPassword(std::string password) {
+void User::setPassword(Password password) {
     this->password = password;
 }
 
@@ -54,6 +52,6 @@ void User::setProfile(Profile profile) {
 void User::print() const {
     std::cout << "Firstname: " << this->firstname << std::endl;
     std::cout << "Lastname: " << this->lastname << std::endl;
-    std::cout << "Email: " << this->email << std::endl;
-    std::cout << "Password: " << this->password << std::endl;
+    std::cout << "Email: " << this->email.value << std::endl;
+    std::cout << "Password: " << this->password.value << std::endl;
 }

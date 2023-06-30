@@ -5,11 +5,8 @@
 #include "City.h"
 
 // Constructors
-City::City(std::string zipcode, double latitude, double longitude, short altitude) {
-    this->zipcode = zipcode;
-    this->latitude = latitude;
-    this->longitude = longitude;
-    this->altitude = altitude;
+City::City(std::string name, std::uint8_t inseeCode, std::string isoCode) : Zone(name, inseeCode, isoCode) {
+
 }
 
 // Getters

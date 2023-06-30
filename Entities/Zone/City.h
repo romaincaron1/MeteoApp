@@ -15,7 +15,7 @@ class City : public Zone {
         double longitude;
         short altitude;
     public:
-        City(std::string zipcode, double latitude, double longitude, short altitude);
+        City(std::string name, std::uint8_t inseeCode, std::string isoCode);
         // Getters
         std::string getZipcode() const;
         double getLatitude() const;

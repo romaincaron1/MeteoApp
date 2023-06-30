@@ -10,7 +10,7 @@
 
 class Region: public Zone {
     public:
-        Region();
+        Region(std::string name, std::uint8_t inseeCode, std::string isoCode);
 };
 
 
