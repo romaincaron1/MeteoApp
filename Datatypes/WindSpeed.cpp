@@ -1,31 +1,17 @@
-#include <iostream>
+#include "WindSpeed.h"
 
-enum WindSpeedUnit {
-    KMH,
-    NODE,
-    MPS
-};
+WindSpeed::WindSpeed(short value, WindSpeedUnit unit) {
+    this->value = value;
+    this->unit = unit;
+}
 
-struct WindSpeed {
-    short value;
-    WindSpeedUnit unit;
-
-    WindSpeed(short value, WindSpeedUnit unit) {
-        this->value = value;
-        this->unit = unit;
+void WindSpeed::print() {
+    switch (unit) {
+        case KPH:
+            std::cout << value << "kph" << std::endl;
+            break;
+        case MPH:
+            std::cout << value << "mph" << std::endl;
+            break;
     }
-
-    void print() {
-        switch (unit) {
-            case KMH:
-                std::cout << value << "km/h" << std::endl;
-                break;
-            case NODE:
-                std::cout << value << (value > 1 ? "noeuds" : "noeud") << std::endl;
-                break;
-            case MPS:
-                std::cout << value << "m/s" << std::endl;
-                break;
-        }
-    }
-};
+}

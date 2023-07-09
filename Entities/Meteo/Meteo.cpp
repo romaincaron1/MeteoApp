@@ -5,12 +5,17 @@
 #include "Meteo.h"
 
 Meteo::Meteo(std::uint8_t humidity, std::uint8_t precipitation, Temperature temperature, WindSpeed windSpeed,
-             CloudQuantity cloudQuantity) : temperature(temperature), windSpeed(windSpeed), cloudQuantity(cloudQuantity) {
+             std::uint8_t cloudQuantity) : temperature(temperature), windSpeed(windSpeed) {
     this->humidity = humidity;
     this->precipitation = precipitation;
+    this->cloudQuantity = cloudQuantity;
 }
 
 // Getters
+
+int Meteo::getId() const {
+    return this->id;
+}
 
 std::uint8_t Meteo::getHumidity() const {
     return this->humidity;
@@ -28,11 +33,15 @@ WindSpeed Meteo::getWindSpeed() const {
     return this->windSpeed;
 }
 
-CloudQuantity Meteo::getCloudQuantity() const {
+std::uint8_t Meteo::getCloudQuantity() const {
     return this->cloudQuantity;
 }
 
 // Setters
+
+void Meteo::setId(int id) {
+    this->id = id;
+}
 
 void Meteo::setHumidity(std::uint8_t humidity) {
     this->humidity = humidity;
@@ -50,6 +59,6 @@ void Meteo::setWindSpeed(WindSpeed windSpeed) {
     this->windSpeed = windSpeed;
 }
 
-void Meteo::setCloudQuantity(CloudQuantity cloudQuantity) {
+void Meteo::setCloudQuantity(std::uint8_t cloudQuantity) {
     this->cloudQuantity = cloudQuantity;
 }

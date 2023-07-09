@@ -1,10 +1,15 @@
 #include "User.h"
 
-// Getters
-
-User::User(std::string firstname, std::string lastname, Email email, Password password, Profile profile) : profile(profile), email(email), password(password) {
+User::User(std::string firstname, std::string lastname, Email email, Password password, Profile profile,
+           Preference preference) : profile(profile), email(email), password(password), preference(preference) {
     this->firstname = firstname;
     this->lastname = lastname;
+}
+
+// Getters
+
+const int User::getId() const {
+    return this->id;
 }
 
 const std::string User::getFirstname() const {
@@ -23,11 +28,19 @@ const Password User::getPassword() const {
     return this->password.value;
 }
 
-const Profile User::getProfile() const {
+Profile User::getProfile() const {
     return this->profile;
 }
 
+Preference User::getPreference() const {
+    return this->preference;
+}
+
 // Setters
+
+void User::setId(int id) {
+    this->id = id;
+}
 
 void User::setFirstname(std::string firstname) {
     this->firstname = firstname;
@@ -49,7 +62,12 @@ void User::setProfile(Profile profile) {
     this->profile = profile;
 }
 
+void User::setPreference(Preference preference) {
+    this->preference = preference;
+}
+
 void User::print() const {
+    std::cout << "Id: " << this->id << std::endl;
     std::cout << "Firstname: " << this->firstname << std::endl;
     std::cout << "Lastname: " << this->lastname << std::endl;
     std::cout << "Email: " << this->email.value << std::endl;

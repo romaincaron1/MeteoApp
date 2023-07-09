@@ -8,22 +8,42 @@
 #include <iostream>
 #include <string>
 
+#include "../Meteo/Meteo.h"
+
 class Zone {
     private:
-        std::string name;
-        std::uint8_t inseeCode;
-        std::string isoCode;
+        int id;
+        std::string country;
+        std::string region;
+        std::string city;
+        double latitude;
+        double longitude;
+        std::optional<Meteo> meteo;
 
     public:
-        Zone(std::string name, std::uint8_t inseeCode, std::string isoCode);
+        // Constructors
+        Zone(const std::string country, const std::string region, const std::string city, const double latitude, const double longitude, const std::optional<Meteo> &meteo);
+
         // Getters
-        virtual const std::string getName() const;
-        virtual const std::uint8_t getInseeCode() const;
-        virtual const std::string getIsoCode() const;
+        const int getId() const;
+        const std::string getCountry() const;
+        const std::string getRegion() const;
+        const std::string getCity() const;
+        const double getLatitude() const;
+        const double getLongitude() const;
+        const std::optional<Meteo> getMeteo() const;
+
         // Setters
-        virtual void setName(std::string name);
-        virtual void setInseeCode(std::uint8_t inseeCode);
-        virtual void setIsoCode(std::string isoCode);
+        void setId(int id);
+        void setCountry(std::string country);
+        void setRegion(std::string region);
+        void setCity(std::string city);
+        void setLatitude(double latitude);
+        void setLongitude(double longitude);
+        void setMeteo(std::optional<Meteo> meteo);
+
+        // Methods
+        void print();
 };
 
 

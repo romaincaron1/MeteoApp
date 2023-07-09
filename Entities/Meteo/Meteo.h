@@ -6,33 +6,36 @@
 #define METEO_METEO_H
 
 #include <iostream>
-#include "../../Datatypes/Temperature.cpp"
-#include "../../Datatypes/WindSpeed.cpp"
+#include "../../Datatypes/Temperature.h"
+#include "../../Datatypes/WindSpeed.h"
 #include "../../Datatypes/CloudQuantity.cpp"
 
 class Meteo {
     private:
-        std::uint8_t humidity;
-        std::uint8_t precipitation;
+        int id;
         Temperature temperature;
         WindSpeed windSpeed;
-        CloudQuantity cloudQuantity;
+        std::uint8_t humidity;
+        std::uint8_t precipitation;
+        std::uint8_t cloudQuantity;
     public:
         // Constructors
         Meteo(std::uint8_t humidity, std::uint8_t precipitation, Temperature temperature, WindSpeed windSpeed,
-              CloudQuantity cloudQuantity);
+              std::uint8_t cloudQuantity);
         // Getters
-        std::uint8_t getHumidity() const;
-        std::uint8_t getPrecipitation() const;
+        int getId() const;
         Temperature getTemperature() const;
         WindSpeed getWindSpeed() const;
-        CloudQuantity getCloudQuantity() const;
+        std::uint8_t getHumidity() const;
+        std::uint8_t getPrecipitation() const;
+        std::uint8_t getCloudQuantity() const;
         // Setters
-        void setHumidity(std::uint8_t humidity);
-        void setPrecipitation(std::uint8_t precipitation);
+        void setId(int id);
         void setTemperature(Temperature temperature);
         void setWindSpeed(WindSpeed windSpeed);
-        void setCloudQuantity(CloudQuantity cloudQuantity);
+        void setHumidity(std::uint8_t humidity);
+        void setPrecipitation(std::uint8_t precipitation);
+        void setCloudQuantity(std::uint8_t cloudQuantity);
 };
 
 

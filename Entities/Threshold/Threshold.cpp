@@ -6,7 +6,7 @@ Threshold::Threshold(const std::optional<Temperature> &min, const std::optional<
                      const std::optional<WindSpeed> &windSpeedMin, const std::optional<WindSpeed> &windSpeedMax,
                      const std::optional<std::uint8_t> &humidityMin, const std::optional<std::uint8_t> &humidityMax,
                      const std::optional<std::uint8_t> &precipitationMin,
-                     const std::optional<std::uint8_t> &precipitationMax, const std::optional<Zone> &zone)
+                     const std::optional<std::uint8_t> &precipitationMax)
         : temperatureMin(min),
           temperatureMax(max),
           windSpeedMin(windSpeedMin),
@@ -18,6 +18,10 @@ Threshold::Threshold(const std::optional<Temperature> &min, const std::optional<
 }
 
 // Getters
+
+int Threshold::getId() const {
+    return id;
+}
 
 std::optional<Temperature> Threshold::getTemperatureMin() const {
     if (temperatureMin) {
@@ -84,6 +88,10 @@ std::optional<std::uint8_t> Threshold::getPrecipitationMax() const {
 }
 
 // Setters
+
+void Threshold::setId(int id) {
+    Threshold::id = id;
+}
 
 void Threshold::setTemperatureMin(const std::optional<Temperature> &temperatureMin) {
     Threshold::temperatureMin = temperatureMin;
